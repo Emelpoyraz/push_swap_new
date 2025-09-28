@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int stack_size(t_node *stack)
 {
