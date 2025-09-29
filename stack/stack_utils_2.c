@@ -35,18 +35,7 @@ int find_min_index(t_node *stack)
     }
     return (index);
 }
-int	get_chunk_count(int size)
-{
-	if (size <= 50)
-		return (5);
-	else if (size <= 100)
-		return (6);
-	else if (size <= 300)
-		return (9);
-	else if (size <= 500)
-		return (11);
-	return (20); // for ultra-large inputs
-}
+
 void free_stack(t_node **stack)
 {
     t_node *temp;

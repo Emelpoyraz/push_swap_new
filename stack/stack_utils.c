@@ -8,6 +8,7 @@ t_node *new_node(int value)
     if(!node)
         exit_error();
     node->value = value;
+    node->index = -1;
     node->next = NULL;
     return(node);
 }
@@ -25,6 +26,7 @@ void push_back(t_node **stack, t_node *new)
 
     if(!stack || !new)
         return;
+    new->next = NULL;
     if(!*stack)
     {
         *stack = new;
