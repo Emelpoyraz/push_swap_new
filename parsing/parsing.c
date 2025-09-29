@@ -1,6 +1,6 @@
 #include "../include/push_swap.h"
 
-static long ft_atol(const char *str)
+long ft_atol(const char *str)
 {
     int sign;
     long result;
@@ -27,15 +27,15 @@ int is_valid_number(char *str)
     int i;
 
     i = 0;
-    if(!str[0])
+    if (!str[0])
         return (0);
-    if(str[0] == '-' || str[0] == '+')
+    if ((str[0] == '-' || str[0] == '+') && !str[1])
+        return (0);
+    if (str[0] == '-' || str[0] == '+')
         i++;
-    if(!str[0])
-        return (0);
     while (str[i])
     {
-        if(str[i] < '0' || str[i] > '9')
+        if (str[i] < '0' || str[i] > '9')
             return (0);    
         i++;
     }
@@ -62,26 +62,29 @@ void exit_error(void)
 t_node	*parse_args(int argc, char **argv)
 {
 	t_node	*stack;
-	t_node	*new;
-	long	num;
-	int		i;
+	char	**split;
+	int i;
+	int j;
 
 	stack = NULL;
 	i = argc - 1;
 	while (i > 0)
 	{
-		if (!is_valid_number(argv[i]))
-			exit_error();
-		num = ft_atol(argv[i]);
-		if (num < INT_MIN || num > INT_MAX || is_duplicate(stack, (int)num))
-			exit_error();
-		new = malloc(sizeof(t_node));
-		if (!new)
-			exit_error();
-		new->value = (int)num;
-		new->next = stack;
-		stack = new;
-		i--;
+        split = ft_split(argv[i], ' ');
+        if(!split || !split[0])
+            exit_error();
+        j = 0;
+        while (split[j])
+        {
+            stack = process_arg(split[j], stack);
+            j++;
+        }
+        j = 0;
+        while(split[j])
+            free(split[j++]);
+        free(split);
+        i--;
 	}
 	return (stack);
 }
+

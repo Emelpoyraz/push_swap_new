@@ -1,18 +1,27 @@
-
 #include <stdio.h>
-#include "push_swap.h"
+#include "include/push_swap.h"
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	t_node	*a;
-	t_node	*b;
+    t_node *a;
+    t_node *b;
 
-	if (argc < 2)
-		return (0);
-	a = parse_args(argc, argv);
-	b = NULL;
-	normalize_stack(a);
-	sort_all(&a,&b);
-	free_stack(&a);
-	return (0);
+    if (argc < 2)
+        return (0);
+
+    a = parse_args(argc, argv);
+    if (!a)
+        exit_error();
+    b = NULL;
+
+    normalize_stack(a);
+
+    if (stack_size(a) <= 5)
+        sort_under_six(&a, &b);
+    else
+        sort_fresh(&a, &b);
+
+    free_stack(&a);
+    free_stack(&b);
+    return (0);
 }

@@ -19,6 +19,8 @@ int is_valid_number(char *str);
 int is_duplicate(t_node *stack, int value);
 void    exit_error(void);
 void	normalize_stack(t_node *stack);
+long ft_atol(const char *str);
+t_node *process_arg(char *arg, t_node *stack);
 
 /* ============ STACK UTILS ============ */
 t_node  *new_node(int value);
@@ -50,4 +52,14 @@ void	rrr(t_node **a, t_node **b);
 void    sort_under_six(t_node **a, t_node **b);
 void    sort_fresh(t_node **a, t_node **b);
 
+
+
+
+
+void	sort_fresh(t_node **a, t_node **b);
+int	node_index(t_node *stack, t_node *target);
+int	find_insert_position(t_node *a, int value);
+int	rotation_cost(t_node *stack, int index);
+void	execute_best_move(t_node **a, t_node **b, t_node *target);
+int min_index(t_node *stack);
 #endif

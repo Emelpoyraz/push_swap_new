@@ -1,4 +1,4 @@
-#include "../include/push_swap.h"
+/*#include "../include/push_swap.h"
 
 static int get_min_position(t_node *stack)
 {
@@ -75,3 +75,4 @@ void    sort_fresh(t_node **a, t_node **b)
     while(*b)
         pa_smart(a,b);
 }
+        */

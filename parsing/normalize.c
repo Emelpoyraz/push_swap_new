@@ -16,7 +16,6 @@ static int *to_array(t_node *stack, int size)
     }
     return(arr);
 }
-
 static void sort_array(int *arr, int size)
 {
     int tmp;
