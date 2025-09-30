@@ -51,7 +51,7 @@ void	rrr(t_node **a, t_node **b);
 void    sort_under_six(t_node **a, t_node **b);
 void    sort_fresh(t_node **a, t_node **b);
 
-
+int	*find_lis(t_node *a, int size, int *lis_len);
 void exit_error();
 int validate_number(char *str, t_node *stack, char **split);
 int is_sorted(t_node *stack);

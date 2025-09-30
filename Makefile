@@ -9,7 +9,8 @@ SRC         = main.c \
               parsing/parsing.c parsing/check_args.c parsing/normalize.c \
               stack/stack_utils.c stack/stack_utils_2.c \
               operations/push.c operations/reverse_rotate.c operations/rotate.c operations/swap.c \
-              sorting/sort_small.c sorting/sort_fresh.c sorting/rotation_utils.c sorting/insertion_utils.c
+              sorting/sort_small.c sorting/sort_fresh.c sorting/rotation_utils.c sorting/lis_utils.c \
+			  sorting/insertion_utils.c sorting/insertion_utils_2.c sorting/insertion_utils_3.c
 
 OBJ		= $(SRC:.c=.o)
 
