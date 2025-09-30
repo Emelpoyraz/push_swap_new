@@ -35,15 +35,8 @@ int find_min_index(t_node *stack)
     }
     return (index);
 }
-
-void free_stack(t_node **stack)
+void exit_error()
 {
-    t_node *temp;
-
-    while (*stack)
-    {
-        temp = *stack;
-        *stack = (*stack)->next;
-        free(temp);
-    }
+    write(2, "Error\n", 6);
+    exit(1);
 }

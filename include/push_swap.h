@@ -17,7 +17,6 @@ typedef struct s_node
 t_node  *parse_args(int argc, char **argv);
 int is_valid_number(char *str);
 int is_duplicate(t_node *stack, int value);
-void    exit_error(void);
 void	normalize_stack(t_node *stack);
 long ft_atol(const char *str);
 t_node *process_arg(char *arg, t_node *stack);
@@ -53,9 +52,12 @@ void    sort_under_six(t_node **a, t_node **b);
 void    sort_fresh(t_node **a, t_node **b);
 
 
-
-
-
+void exit_error();
+int validate_number(char *str, t_node *stack, char **split);
+int is_sorted(t_node *stack);
+void free_stack(t_node **stack);
+void    free_split(char **split);
+void    exit_error_safe(t_node **stack, char **split);
 void	sort_fresh(t_node **a, t_node **b);
 int	node_index(t_node *stack, t_node *target);
 int	find_insert_position(t_node *a, int value);

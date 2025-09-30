@@ -52,17 +52,23 @@ int is_duplicate(t_node *stack, int value)
     }
     return (0);
 }
-
-void exit_error(void)
+int validate_number(char *str, t_node *stack, char **split)
 {
-    write(2, "Error\n", 6);
-    exit(1);
+    long num;
+
+    if (!is_valid_number(str))
+        exit_error_safe(&stack, split);
+    num = ft_atol(str);
+    if (num < INT_MIN || num > INT_MAX || is_duplicate(stack, (int)num))
+        exit_error_safe(&stack, split);
+    return ((int)num);
 }
 
 t_node	*parse_args(int argc, char **argv)
 {
 	t_node	*stack;
 	char	**split;
+    int num;
 	int i;
 	int j;
 
@@ -72,19 +78,17 @@ t_node	*parse_args(int argc, char **argv)
 	{
         split = ft_split(argv[i], ' ');
         if(!split || !split[0])
-            exit_error();
+            exit_error_safe(&stack, split);
         j = 0;
         while (split[j])
         {
+            num = validate_number(split[j],stack,split);
+            (void)num;
             stack = process_arg(split[j], stack);
             j++;
         }
-        j = 0;
-        while(split[j])
-            free(split[j++]);
-        free(split);
+        free_split(split);
         i--;
 	}
 	return (stack);
 }
-

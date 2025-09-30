@@ -10,8 +10,12 @@ int main(int argc, char **argv)
         return (0);
 
     a = parse_args(argc, argv);
-    if (!a)
-        exit_error();
+
+    if (is_sorted(a))
+    {
+        free_stack(&a);
+        return (0);
+    }
     b = NULL;
 
     normalize_stack(a);
@@ -21,7 +25,5 @@ int main(int argc, char **argv)
     else
         sort_fresh(&a, &b);
 
-    free_stack(&a);
-    free_stack(&b);
-    return (0);
+    return (free_stack(&a),free_stack(&b),0);
 }
