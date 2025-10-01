@@ -8,26 +8,17 @@ static void	sort_two(t_node **a)
 
 static void	sort_three(t_node **a)
 {
-	int	first = (*a)->value;
-	int	second = (*a)->next->value;
-	int	third = (*a)->next->next->value;
+	int f = (*a)->value;
+	int s = (*a)->next->value;
+	int t = (*a)->next->next->value;
 
-	if (first > second && second < third && first < third)
-		sa(a);
-	else if (first > second && second > third)
-	{
-		sa(a);
-		rra(a);
-	}
-	else if (first > second && second < third && first > third)
+	if (f > s && f > t)
 		ra(a);
-	else if (first < second && second > third && first < third)
-	{
-		sa(a);
-		ra(a);
-	}
-	else if (first < second && second > third && first > third)
+	else if (s > f && s > t)
 		rra(a);
+
+	if ((*a)->value > (*a)->next->value)
+		sa(a);
 }
 
 static void	sort_four(t_node **a, t_node **b)
