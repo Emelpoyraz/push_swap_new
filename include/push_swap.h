@@ -11,7 +11,7 @@ typedef struct s_node
     int value;
     int index;
     struct s_node *next;
-    
+
 } t_node;
 /* ============ PARSING ============ */
 t_node  *parse_args(int argc, char **argv);

@@ -42,13 +42,13 @@ static void sort_array(int *arr, int size)
 static int get_index(int *arr, int size, int value)
 {
     int i;
-    
+
     i = 0;
     while (i < size)
     {
         if(arr[i] == value)
             return(i);
-        i++;    
+        i++;
     }
     return (0);
 }
