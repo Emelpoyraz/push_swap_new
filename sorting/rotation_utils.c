@@ -1,27 +1,27 @@
 #include "../include/push_swap.h"
 
-int get_max_position(t_node *stack)
+int	get_max_position(t_node *stack)
 {
-    int pos;
-    int max_pos;
-    int max;
-    t_node *temp;
+	int		pos;
+	int		max_pos;
+	int		max;
+	t_node	*temp;
 
-    pos = 0;
-    max_pos = 0;
-    max = stack->index;
-    temp = stack;
-    while (temp)
-    {
-        if (temp->index > max)
-        {
-            max = temp->index;
-            max_pos = pos;
-        }
-        pos++;
-        temp = temp->next;
-    }
-    return(max_pos);
+	pos = 0;
+	max_pos = 0;
+	max = stack->index;
+	temp = stack;
+	while (temp)
+	{
+		if (temp->index > max)
+		{
+			max = temp->index;
+			max_pos = pos;
+		}
+		pos++;
+		temp = temp->next;
+	}
+	return (max_pos);
 }
 void	rotate_smart(t_node **b)
 {
@@ -41,10 +41,10 @@ void	rotate_smart(t_node **b)
 			rrb(b);
 	}
 }
-void pa_smart(t_node **a, t_node **b)
+void	pa_smart(t_node **a, t_node **b)
 {
-    if(!*b)
-        return;
-    rotate_smart(b);
-    pa(a,b);
+	if (!*b)
+		return ;
+	rotate_smart(b);
+	pa(a, b);
 }

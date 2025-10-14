@@ -1,18 +1,17 @@
 #include "../include/push_swap.h"
 
-static void swap(t_node **stack)
+static void	swap(t_node **stack)
 {
-    t_node *first;
-    t_node *second;
+	t_node	*first;
+	t_node	*second;
 
-    if(!stack || !*stack || !(*stack)->next)
-        return;
-    first = *stack;
-    second = (*stack)->next;
-
-    first->next = second->next;
-    second->next = first;
-    *stack = second;
+	if (!stack || !*stack || !(*stack)->next)
+		return ;
+	first = *stack;
+	second = (*stack)->next;
+	first->next = second->next;
+	second->next = first;
+	*stack = second;
 }
 
 void	sa(t_node **a)

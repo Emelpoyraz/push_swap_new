@@ -31,8 +31,8 @@ static void	init_dp_arrays(int *dp, int *prev, int size)
 	}
 }
 
-static void	compute_lis(int *arr, int *dp, int *prev,
-			int size, int *max_len, int *max_idx)
+static void	compute_lis(int *arr, int *dp, int *prev, int size, int *max_len,
+		int *max_idx)
 {
 	int	i;
 	int	j;
@@ -61,8 +61,7 @@ static void	compute_lis(int *arr, int *dp, int *prev,
 	}
 }
 
-static int	*reconstruct_lis(int *arr, int *prev,
-			int max_len, int max_idx)
+static int	*reconstruct_lis(int *arr, int *prev, int max_len, int max_idx)
 {
 	int	*lis;
 	int	k;

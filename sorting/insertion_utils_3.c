@@ -1,8 +1,8 @@
 #include "../include/push_swap.h"
 
 /* ===== Execute the best move to insert chosen node from B → A ===== */
-static void	rotate_both_forward(t_node **a, t_node **b,
-			int *cost_a, int *cost_b)
+static void	rotate_both_forward(t_node **a, t_node **b, int *cost_a,
+		int *cost_b)
 {
 	while (*cost_a > 0 && *cost_b > 0)
 	{
@@ -12,8 +12,8 @@ static void	rotate_both_forward(t_node **a, t_node **b,
 	}
 }
 
-static void	rotate_both_backward(t_node **a, t_node **b,
-			int *cost_a, int *cost_b)
+static void	rotate_both_backward(t_node **a, t_node **b, int *cost_a,
+		int *cost_b)
 {
 	while (*cost_a < 0 && *cost_b < 0)
 	{
