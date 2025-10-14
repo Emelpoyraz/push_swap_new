@@ -18,7 +18,7 @@ t_node  *parse_args(int argc, char **argv);
 int is_valid_number(char *str);
 int is_duplicate(t_node *stack, int value);
 void	normalize_stack(t_node *stack);
-long ft_atol(const char *str);
+long	ft_atol_checked(const char *str, t_node **stack, char **split);
 t_node *process_arg(char *arg, t_node *stack);
 
 /* ============ STACK UTILS ============ */

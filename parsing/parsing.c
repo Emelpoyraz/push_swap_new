@@ -1,27 +1,33 @@
 #include "../include/push_swap.h"
 
-long ft_atol(const char *str)
+long	ft_atol_checked(const char *str, t_node **stack, char **split)
 {
-    int sign;
-    long result;
+	long	result;
+	int		sign;
+	int		digit;
 
-    sign = 1;
-    result = 0;
-    while(*str ==' ' || (*str >= 9 && *str <=13))
-        str++;
-    if (*str == '-' || *str == '+')
-    {
-        if(*str == '-')
-            sign *= -1;
-        str++;
-    }
-    while (*str >= '0' && *str <= '9')
-    {
-        result = result * 10 + (*str - '0');
-        str++;
-    }
-    return ( result * sign);
+	sign = 1;
+	result = 0;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		digit = *str - '0';
+		if ((result > (LONG_MAX - digit) / 10) ||
+			(result < (LONG_MIN + digit) / 10))
+			exit_error_safe(stack, split);
+		result = result * 10 + (digit * sign);
+		str++;
+	}
+	return (result);
 }
+
 int is_valid_number(char *str)
 {
     int i;
@@ -58,7 +64,7 @@ int validate_number(char *str, t_node *stack, char **split)
 
     if (!is_valid_number(str))
         exit_error_safe(&stack, split);
-    num = ft_atol(str);
+   num = ft_atol_checked(str, &stack, split);
     if (num < INT_MIN || num > INT_MAX || is_duplicate(stack, (int)num))
         exit_error_safe(&stack, split);
     return ((int)num);
