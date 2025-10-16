@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 15:02:07 by epoyraz           #+#    #+#             */
+/*   Updated: 2025/10/16 15:28:40 by epoyraz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -23,6 +35,25 @@ typedef struct s_lis_data
 	int				max_len;
 	int				max_idx;
 }					t_lis_data;
+
+typedef struct s_insert_data
+{
+	t_node			*cur;
+	t_node			*best;
+	int				target_pos;
+	int				cost_a;
+	int				cost_b;
+	int				best_cost;
+}					t_insert_data;
+
+typedef struct s_push_data
+{
+	t_node			**a;
+	t_node			**b;
+	int				*lis;
+	int				lis_len;
+	int				size;
+}					t_push_data;
 
 /* ============ PARSING ============ */
 t_node				*parse_args(int argc, char **argv);
