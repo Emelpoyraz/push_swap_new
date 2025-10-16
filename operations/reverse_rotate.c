@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 13:51:46 by epoyraz           #+#    #+#             */
+/*   Updated: 2025/10/16 13:51:51 by epoyraz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 static void	reverse_rotate(t_node **stack)
@@ -18,6 +30,7 @@ static void	reverse_rotate(t_node **stack)
 	last->next = *stack;
 	*stack = last;
 }
+
 void	rra(t_node **a)
 {
 	reverse_rotate(a);
