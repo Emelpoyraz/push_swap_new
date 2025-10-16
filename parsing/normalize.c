@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   normalize.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 13:52:59 by epoyraz           #+#    #+#             */
+/*   Updated: 2025/10/16 13:53:12 by epoyraz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 static int	*to_array(t_node *stack, int size)
@@ -16,6 +28,7 @@ static int	*to_array(t_node *stack, int size)
 	}
 	return (arr);
 }
+
 static void	sort_array(int *arr, int size)
 {
 	int	tmp;
@@ -39,6 +52,7 @@ static void	sort_array(int *arr, int size)
 		i++;
 	}
 }
+
 static int	get_index(int *arr, int size, int value)
 {
 	int	i;
@@ -52,6 +66,7 @@ static int	get_index(int *arr, int size, int value)
 	}
 	return (0);
 }
+
 void	normalize_stack(t_node *stack)
 {
 	int		*sorted;

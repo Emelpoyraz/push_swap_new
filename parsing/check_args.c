@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_args.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 13:52:55 by epoyraz           #+#    #+#             */
+/*   Updated: 2025/10/16 13:52:56 by epoyraz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 int	is_sorted(t_node *stack)
@@ -10,6 +22,7 @@ int	is_sorted(t_node *stack)
 	}
 	return (1);
 }
+
 void	free_stack(t_node **stack)
 {
 	t_node	*temp;
@@ -21,6 +34,7 @@ void	free_stack(t_node **stack)
 		free(temp);
 	}
 }
+
 void	free_split(char **split)
 {
 	int	i;

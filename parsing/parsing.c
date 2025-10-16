@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 13:53:17 by epoyraz           #+#    #+#             */
+/*   Updated: 2025/10/16 13:53:32 by epoyraz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 long	ft_atol_checked(const char *str, t_node **stack, char **split)
@@ -58,6 +70,7 @@ int	is_duplicate(t_node *stack, int value)
 	}
 	return (0);
 }
+
 int	validate_number(char *str, t_node *stack, char **split)
 {
 	long	num;
