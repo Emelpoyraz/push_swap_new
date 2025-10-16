@@ -31,31 +31,30 @@ static void	init_dp_arrays(int *dp, int *prev, int size)
 	}
 }
 
-static void	compute_lis(int *arr, int *dp, int *prev, int size, int *max_len,
-		int *max_idx)
+static void	compute_lis(t_lis_data *data)
 {
 	int	i;
 	int	j;
 
-	*max_len = 1;
-	*max_idx = 0;
+	data->max_len = 1;
+	data->max_idx = 0;
 	i = 0;
-	while (i < size)
+	while (i < data->size)
 	{
 		j = 0;
 		while (j < i)
 		{
-			if (arr[j] < arr[i] && dp[j] + 1 > dp[i])
+			if (data->arr[j] < data->arr[i] && data->dp[j] + 1 > data->dp[i])
 			{
-				dp[i] = dp[j] + 1;
-				prev[i] = j;
+				data->dp[i] = data->dp[j] + 1;
+				data->prev[i] = j;
 			}
 			j++;
 		}
-		if (dp[i] > *max_len)
+		if (data->dp[i] > data->max_len)
 		{
-			*max_len = dp[i];
-			*max_idx = i;
+			data->max_len = data->dp[i];
+			data->max_idx = i;
 		}
 		i++;
 	}
@@ -83,24 +82,22 @@ static int	*reconstruct_lis(int *arr, int *prev, int max_len, int max_idx)
 
 int	*find_lis(t_node *a, int size, int *lis_len)
 {
-	int	*arr;
-	int	*dp;
-	int	*prev;
-	int	max_len;
-	int	max_idx;
-	int	*lis;
+	t_lis_data 	data;
+	int			*lis;
 
-	arr = flatten_stack(a, size);
-	dp = malloc(sizeof(int) * size);
-	prev = malloc(sizeof(int) * size);
-	if (!arr || !dp || !prev)
+	data.arr = flatten_stack(a, size);
+	data.dp = malloc(sizeof(int) * size);
+	data.prev = malloc(sizeof(int) * size);
+	data.size = size;
+
+	if (!data.arr || !data.dp || !data.prev)
 		return (NULL);
-	init_dp_arrays(dp, prev, size);
-	compute_lis(arr, dp, prev, size, &max_len, &max_idx);
-	*lis_len = max_len;
-	lis = reconstruct_lis(arr, prev, max_len, max_idx);
-	free(arr);
-	free(dp);
-	free(prev);
+	init_dp_arrays(data.dp, data.prev, size);
+	compute_lis(&data);
+	*lis_len = data.max_len;
+	lis = reconstruct_lis(data.arr, data.prev, data.max_len, data.max_idx);
+	free(data.arr);
+	free(data.dp);
+	free(data.prev);
 	return (lis);
 }

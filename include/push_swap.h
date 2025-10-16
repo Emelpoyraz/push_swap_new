@@ -6,7 +6,7 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 13:50:48 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/10/16 13:50:49 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/10/16 14:49:15 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ typedef struct s_node
 	struct s_node	*next;
 
 }					t_node;
+
+typedef struct s_lis_data
+{
+	int *arr;
+	int *dp;
+	int *prev;
+	int size;
+	int max_len;
+	int max_idx;
+}					t_lis_data;
+
 /* ============ PARSING ============ */
 t_node				*parse_args(int argc, char **argv);
 int					is_valid_number(char *str);
