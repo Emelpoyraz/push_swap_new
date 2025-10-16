@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 18:48:01 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 15:26:30 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:00:35 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strnstr(const char *hay, const char *needle, size_t len)
 {
 	size_t	i;

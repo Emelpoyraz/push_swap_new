@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:56:45 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:03:43 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:01:41 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));

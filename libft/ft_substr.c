@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 13:56:17 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/07/03 19:47:40 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 13:55:34 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	slen;

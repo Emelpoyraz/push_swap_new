@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 13:42:37 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:05:05 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:01:00 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;

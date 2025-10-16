@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 15:17:33 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:03:07 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:01:44 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

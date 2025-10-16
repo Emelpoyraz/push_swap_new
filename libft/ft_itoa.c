@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 13:11:27 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:04:18 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:01:21 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int	num_len(int n)
 {
 	int	len;

@@ -24,9 +24,9 @@ static void	insert_from_b(t_node **a, t_node **b)
 	int		best_cost;
 
 	cur = *b;
-	cost_a = 2147483647;
-	cost_b = 2147483647;
-	best_cost = 2147483647;
+	cost_a = 2147483647; // check!!
+	cost_b = 2147483647; // check!!
+	best_cost = 2147483647; // check!!
 	best = NULL;
 	while (cur)
 	{

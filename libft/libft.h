@@ -6,7 +6,7 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 16:55:51 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/23 14:38:17 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/26 11:37:25 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif

@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:55:54 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:05:11 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:00:55 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static size_t	ft_word_count(const char *s, char c)
 {
 	size_t	count;

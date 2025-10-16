@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 15:19:44 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:04:39 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:01:13 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t				i;

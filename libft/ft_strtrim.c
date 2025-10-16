@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 13:02:23 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:35:17 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 13:56:01 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int	in_set(char c, const char *set)
 {
 	while (*set)

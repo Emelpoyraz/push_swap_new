@@ -6,11 +6,12 @@
 /*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 18:43:21 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/06/22 11:04:27 by epoyraz          ###   ########.fr       */
+/*   Updated: 2025/06/22 14:01:17 by epoyraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*p;
