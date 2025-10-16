@@ -20,6 +20,7 @@ void	push_front(t_node **stack, t_node *new)
 	new->next = *stack;
 	*stack = new;
 }
+
 void	push_back(t_node **stack, t_node *new)
 {
 	t_node	*last;
@@ -37,6 +38,7 @@ void	push_back(t_node **stack, t_node *new)
 		last = last->next;
 	last->next = new;
 }
+
 t_node	*pop_front(t_node **stack)
 {
 	t_node	*top;
