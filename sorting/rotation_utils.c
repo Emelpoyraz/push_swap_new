@@ -23,6 +23,7 @@ int	get_max_position(t_node *stack)
 	}
 	return (max_pos);
 }
+
 void	rotate_smart(t_node **b)
 {
 	int	pos;
@@ -41,6 +42,7 @@ void	rotate_smart(t_node **b)
 			rrb(b);
 	}
 }
+
 void	pa_smart(t_node **a, t_node **b)
 {
 	if (!*b)

@@ -1,6 +1,5 @@
 #include "../include/push_swap.h"
 
-/////2ND FUNCTION//////
 static int	in_lis(int val, int *lis, int lis_len)
 {
 	int	i;
@@ -14,15 +13,20 @@ static int	in_lis(int val, int *lis, int lis_len)
 	}
 	return (0);
 }
-/////3RD FUNCTION//////////
+
 static void	insert_from_b(t_node **a, t_node **b)
 {
 	t_node	*cur;
 	int		target_pos;
 	t_node	*best;
+	int		cost_a;
+	int		cost_b;
+	int		best_cost;
 
 	cur = *b;
-	int cost_a, cost_b, best_cost = 2147483647;
+	cost_a = 2147483647;
+	cost_b = 2147483647;
+	best_cost = 2147483647;
 	best = NULL;
 	while (cur)
 	{
@@ -38,7 +42,7 @@ static void	insert_from_b(t_node **a, t_node **b)
 	}
 	execute_best_move(a, b, best);
 }
-/////4TH   FUNCTION
+
 static void	push_non_lis_to_b(t_node **a, t_node **b, int *lis, int lis_len,
 		int size)
 {

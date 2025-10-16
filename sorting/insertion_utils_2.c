@@ -15,6 +15,7 @@ int	node_index(t_node *stack, t_node *target)
 	}
 	return (-1);
 }
+
 /* ===== Cost to rotate stack until index is at top ===== */
 int	rotation_cost(t_node *stack, int index)
 {
@@ -26,6 +27,7 @@ int	rotation_cost(t_node *stack, int index)
 	else
 		return (index - size); // negative = reverse rotate
 }
+
 int	min_index(t_node *stack)
 {
 	int	min;
