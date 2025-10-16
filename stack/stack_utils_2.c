@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_utils_2.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 13:58:01 by epoyraz           #+#    #+#             */
+/*   Updated: 2025/10/16 14:01:02 by epoyraz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 int stack_size(t_node *stack)
@@ -10,7 +22,7 @@ int stack_size(t_node *stack)
         size++;
         stack = stack->next;
     }
-    return(size);
+    return (size);
 }
 int find_min_index(t_node *stack)
 {
@@ -19,7 +31,7 @@ int find_min_index(t_node *stack)
     int i;
 
     if(!stack)
-        return(-1);
+        return (-1);
     min = stack->value;
     index = 0;
     i = 0;
@@ -35,7 +47,8 @@ int find_min_index(t_node *stack)
     }
     return (index);
 }
-void exit_error()
+
+void exit_error(void)
 {
     write(2, "Error\n", 6);
     exit(1);
