@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: epoyraz <epoyraz@student.42istanbul.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 13:50:48 by epoyraz           #+#    #+#             */
-/*   Updated: 2025/10/16 14:49:15 by epoyraz          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -28,12 +16,12 @@ typedef struct s_node
 
 typedef struct s_lis_data
 {
-	int *arr;
-	int *dp;
-	int *prev;
-	int size;
-	int max_len;
-	int max_idx;
+	int				*arr;
+	int				*dp;
+	int				*prev;
+	int				size;
+	int				max_len;
+	int				max_idx;
 }					t_lis_data;
 
 /* ============ PARSING ============ */

@@ -82,14 +82,13 @@ static int	*reconstruct_lis(int *arr, int *prev, int max_len, int max_idx)
 
 int	*find_lis(t_node *a, int size, int *lis_len)
 {
-	t_lis_data 	data;
+	t_lis_data	data;
 	int			*lis;
 
 	data.arr = flatten_stack(a, size);
 	data.dp = malloc(sizeof(int) * size);
 	data.prev = malloc(sizeof(int) * size);
 	data.size = size;
-
 	if (!data.arr || !data.dp || !data.prev)
 		return (NULL);
 	init_dp_arrays(data.dp, data.prev, size);
